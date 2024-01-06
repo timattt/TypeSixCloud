@@ -29,7 +29,7 @@ resource "yandex_mdb_postgresql_cluster" "type-6-postgres-cluster" {
 resource "yandex_mdb_postgresql_database" "type-6-database" {
   cluster_id = yandex_mdb_postgresql_cluster.type-6-postgres-cluster.id
   name       = "type-6-database"
-  owner      = var.type-6-db-username
+  owner      = "default-user"
 }
 
 #
@@ -37,6 +37,6 @@ resource "yandex_mdb_postgresql_database" "type-6-database" {
 #
 resource "yandex_mdb_postgresql_user" "default-user" {
   cluster_id = yandex_mdb_postgresql_cluster.type-6-postgres-cluster.id
-  name       = var.type-6-db-username
+  name       = "default-user"
   password   = var.type-6-db-password
 }

@@ -1,10 +1,6 @@
-variable "type-6-db-username" {
-  type        = string
-  description = "Database username"
-}
 variable "type-6-db-password" {
   type        = string
-  description = "Database username"
+  description = "Database password"
 }
 variable "type-6-folder-id" {
   type = string
