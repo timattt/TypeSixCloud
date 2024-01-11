@@ -1,0 +1,34 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: type-6-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: "yc-clusterissuer"
+spec:
+  tls:
+    - hosts:
+        - shlim-tech.ru
+        - grafana.shlim-tech.ru
+      secretName: domain-name-secret
+  ingressClassName: "nginx"
+  rules:
+    - host: shlim-tech.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: type-6
+                port:
+                  number: 443
+    - host: grafana.shlim-tech.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: grafana
+                port:
+                  number: 3000
