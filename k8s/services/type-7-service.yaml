@@ -3,11 +3,9 @@ kind: Service
 metadata:
   name: type-7
 spec:
-  loadBalancerIP: 158.160.129.147
   ports:
     - port: 443
       name: plaintext
       targetPort: 3000
   selector:
     app: type-7
-  type: LoadBalancer
