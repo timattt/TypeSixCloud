@@ -16,7 +16,7 @@ graph TD;
  subgraph Web
    Browser -.-> type-7
  end
-click type-6 href "http://www.github.com" "This is a tooltip for a link" _blank`
+click type-6 href "http://www.github.com" "This is a tooltip for a link" _blank
 ```
 
 ## Инструкция по выкатыванию в облако
