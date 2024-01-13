@@ -16,7 +16,7 @@ graph TD;
  subgraph Web
    Browser -.-> type-7
  end
-click type-6 https://github.com/timattt/TypeSix
+click type-6 "https://github.com/timattt/TypeSix"
 ```
 
 ## Инструкция по выкатыванию в облако
