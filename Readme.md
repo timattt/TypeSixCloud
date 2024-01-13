@@ -7,7 +7,7 @@
 ```mermaid
 graph TD;
  subgraph Type-6-cloud
-    type-6[an <b>important</b> <a href='http://google.com'>link</a>] --> type-6-d;
+    type-6[<a href='http://google.com'>type-6</a>] --> type-6-d;
     type-7 ---> type-6;
     type-7 -.-> type-6;
     di{Postgres} --- type-6;
