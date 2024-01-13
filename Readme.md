@@ -8,10 +8,10 @@
 graph TD;
  subgraph Type-6-cloud
     type-6[<a href='https://github.com/timattt/TypeSix'>type-6</a>] --> type-6-d;
-    type-7[<a href='https://github.com/timattt/TypeSeven'>type-6</a>] ---> type-6;
+    type-7[<a href='https://github.com/timattt/TypeSeven'>type-7</a>] ---> type-6;
     type-7 -.-> type-6;
     di{Postgres} --- type-6;
-    type-6-d[<a href='https://github.com/timattt/TypeSixD'>type-6</a>] --> di{Postgres};
+    type-6-d[<a href='https://github.com/timattt/TypeSixD'>type-6-d</a>] --> di{Postgres};
  end
  subgraph Web
    Browser -.-> type-7
