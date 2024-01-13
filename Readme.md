@@ -6,15 +6,15 @@
 
 ```mermaid
 graph TD;
- subgraph Type-6-cloud
+ subgraph "Cloud"
     type-6[<a href='https://github.com/timattt/TypeSix'>type-6</a>] --> type-6-d[<a href='https://github.com/timattt/TypeSixD'>type-6-d</a>];
-    type-7[<a href='https://github.com/timattt/TypeSeven'>type-7</a>] ---> type-6[<a href='https://github.com/timattt/TypeSix'>type-6</a>];
-    type-7[<a href='https://github.com/timattt/TypeSeven'>type-7</a>] -.-> type-6[<a href='https://github.com/timattt/TypeSix'>type-6</a>];
+    type-7[<a href='https://github.com/timattt/TypeSeven'>type-7</a>];
     di{Postgres} --- type-6[<a href='https://github.com/timattt/TypeSix'>type-6</a>];
     type-6-d[<a href='https://github.com/timattt/TypeSixD'>type-6-d</a>] --> di{Postgres};
  end
- subgraph Web
+ subgraph "Web"
    Browser -.-> type-7
+   Browser -.-> type-6
  end
 ```
 
