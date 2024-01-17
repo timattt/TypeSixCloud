@@ -32,3 +32,13 @@ spec:
                 name: type-7
                 port:
                   number: 443
+    - host: shlim-tech.ru
+      http:
+        paths:
+          - path: /user-info
+            pathType: Prefix
+            backend:
+              service:
+                name: type-6-m
+                port:
+                  number: 443
