@@ -7,12 +7,12 @@ metadata:
 spec:
   tls:
     - hosts:
-        - shlim-tech.ru
-        - netmapa.online
+        - auth-mipt-match.ru
+        - mipt-match.ru
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
-    - host: shlim-tech.ru
+    - host: auth-mipt-match.ru
       http:
         paths:
           - path: /
@@ -22,7 +22,7 @@ spec:
                 name: type-6
                 port:
                   number: 443
-    - host: netmapa.online
+    - host: mipt-match.ru
       http:
         paths:
           - path: /
@@ -32,7 +32,7 @@ spec:
                 name: type-7
                 port:
                   number: 443
-    - host: shlim-tech.ru
+    - host: auth-mipt-match.ru
       http:
         paths:
           - path: /metadata
