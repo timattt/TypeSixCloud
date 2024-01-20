@@ -39,6 +39,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: type-6-m
+                name: type-7-m
                 port:
                   number: 443
