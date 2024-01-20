@@ -8,6 +8,9 @@ resource "yandex_mdb_postgresql_cluster" "type-6-postgres-cluster" {
   security_group_ids  = [ yandex_vpc_security_group.type-6-security-group.id ]
 
   config {
+    access {
+      web_sql = true
+    }
     version = 16
     resources {
       resource_preset_id = "s2.micro"
