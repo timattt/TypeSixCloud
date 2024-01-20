@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: type-6-d
+  name: type-7-d
 spec:
   selector:
-    app: type-6-d
+    app: type-7-d
   ports:
     - protocol: TCP
       port: 443
