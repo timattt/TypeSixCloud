@@ -9,6 +9,7 @@ spec:
     - hosts:
         - auth-mipt-match.ru
         - mipt-match.ru
+        - grafana-shlim-tech.ru
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -42,3 +43,13 @@ spec:
                 name: type-7-m
                 port:
                   number: 443
+    - host: grafana-shlim-tech.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: grafana
+                port:
+                  number: 3000

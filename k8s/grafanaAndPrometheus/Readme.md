@@ -22,28 +22,6 @@ helm install type-6-prom prometheus-community/prometheus
 kubectl get pods -l "app.kubernetes.io/instance=type-6-prom"
 ```
 
-* Добавляем еще репозиторий:
-
-```
-helm repo add tricksterproxy https://helm.tricksterproxy.io
-```
-
-```
-helm repo update
-```
-
-* Устанавливаем трикстер прокси:
-
-```
-helm install trickster tricksterproxy/trickster --namespace default -f trickster.yaml
-```
-
-* Проверяем, что все ок:
-
-```
-kubectl get pods -l "app=trickster"
-```
-
 * Устанавливаем графану:
 
 ```
