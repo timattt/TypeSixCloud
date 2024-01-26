@@ -10,6 +10,7 @@ spec:
         - auth-mipt-match.ru
         - mipt-match.ru
         - grafana-shlim-tech.ru
+        - prometheus-shlim-tech.ru
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -52,4 +53,14 @@ spec:
               service:
                 name: grafana
                 port:
-                  number: 3000
+                  number: 443
+    - host: prometheus-shlim-tech.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: type-6-prom-prometheus-server
+                port:
+                  number: 80
