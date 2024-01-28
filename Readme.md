@@ -2,6 +2,11 @@
 
 Тут лежат конфиги для поднятия облака в яндексе.
 
+## Ссылки
+
+* [**Grafana**](https://grafana-shlim-tech.ru/)
+* [**mipt.match**](http://mipt-match.ru/)
+
 ## Инфраструктура
 
 ```mermaid
@@ -12,7 +17,6 @@ graph TD;
     type-7-d[<a href='https://github.com/timattt/TypeSevenD'>type-7-d</a>] --> di{Postgres};
     type-7-m[<a href='https://github.com/timattt/TypeSevenM'>type-7-m</a>] --> di{Postgres};
     type-7-m[<a href='https://github.com/timattt/TypeSevenM'>type-7-m</a>] -.-> type-6[<a href='https://github.com/timattt/TypeSix'>type-6</a>];
-    type-7-d[<a href='https://github.com/timattt/TypeSevenD'>type-7-d</a>] -.-> type-6[<a href='https://github.com/timattt/TypeSix'>type-6</a>];
     type-7-m[<a href='https://github.com/timattt/TypeSevenM'>type-7-m</a>] --> type-7-d[<a href='https://github.com/timattt/TypeSevenD'>type-7-d</a>];
 
  end
