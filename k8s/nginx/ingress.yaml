@@ -55,6 +55,16 @@ spec:
                 name: type-7-m
                 port:
                   number: 443
+    - host: auth-mipt-match.ru
+      http:
+        paths:
+          - path: /teaching
+            pathType: Prefix
+            backend:
+              service:
+                name: type-8-t
+                port:
+                  number: 443
     - host: grafana-shlim-tech.ru
       http:
         paths:
