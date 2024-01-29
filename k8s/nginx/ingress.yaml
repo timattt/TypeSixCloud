@@ -11,6 +11,7 @@ spec:
         - mipt-match.ru
         - grafana-shlim-tech.ru
         - prometheus-shlim-tech.ru
+        - mipt-study.ru
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:

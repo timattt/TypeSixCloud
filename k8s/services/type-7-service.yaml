@@ -5,7 +5,6 @@ metadata:
 spec:
   ports:
     - port: 443
-      name: plaintext
       targetPort: 3000
   selector:
     app: type-7

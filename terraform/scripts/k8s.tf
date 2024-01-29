@@ -35,6 +35,21 @@ resource "yandex_kubernetes_node_group" "type-node-group" {
   }
 }
 
+resource "yandex_kubernetes_node_group" "type-node-group-scaled" {
+  cluster_id = yandex_kubernetes_cluster.type-6-k8s.id
+  count = 1
+  scale_policy {
+    auto_scale {
+      initial = 1
+      max     = 3
+      min     = 1
+    }
+  }
+  instance_template {
+
+  }
+}
+
 resource "yandex_kms_symmetric_key" "kms-key" {
   # A key for encrypting critical information, including passwords, OAuth tokens, and SSH keys.
   name              = "kms-key"
