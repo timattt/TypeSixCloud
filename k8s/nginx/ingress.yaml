@@ -12,6 +12,7 @@ spec:
         - grafana-shlim-tech.ru
         - prometheus-shlim-tech.ru
         - mipt-study.ru
+        - rutesil.ru
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -35,16 +36,6 @@ spec:
                 name: type-7
                 port:
                   number: 443
-    - host: mipt-study.ru
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: type-8
-                port:
-                  number: 443
     - host: auth-mipt-match.ru
       http:
         paths:
@@ -53,16 +44,6 @@ spec:
             backend:
               service:
                 name: type-7-m
-                port:
-                  number: 443
-    - host: auth-mipt-match.ru
-      http:
-        paths:
-          - path: /teaching
-            pathType: Prefix
-            backend:
-              service:
-                name: type-8-t
                 port:
                   number: 443
     - host: grafana-shlim-tech.ru
@@ -85,3 +66,13 @@ spec:
                 name: type-6-prom-prometheus-server
                 port:
                   number: 80
+    - host: rutesil.ru
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: type-9
+                port:
+                  number: 443
