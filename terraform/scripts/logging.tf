@@ -8,6 +8,16 @@ resource "yandex_resourcemanager_folder_iam_member" "sa-editor" {
   role      = "storage.editor"
   member    = "serviceAccount:${yandex_iam_service_account.bucket-service-account.id}"
 }
+resource "yandex_resourcemanager_folder_iam_member" "sa-logging-writer" {
+  folder_id = var.type-6-folder-id
+  role      = "logging.writer"
+  member    = "serviceAccount:${yandex_iam_service_account.bucket-service-account.id}"
+}
+resource "yandex_resourcemanager_folder_iam_member" "sa-storage-uploader" {
+  folder_id = var.type-6-folder-id
+  role      = "storage.uploader"
+  member    = "serviceAccount:${yandex_iam_service_account.bucket-service-account.id}"
+}
 
 // Создание статического ключа доступа
 resource "yandex_iam_service_account_static_access_key" "sa-static-key" {
@@ -24,4 +34,11 @@ resource "yandex_storage_bucket" "type-6-logs-bucket" {
     read = true
     list = false
   }
+}
+
+resource "yandex_logging_group" "k8slog" {
+  name             = "k8slog"
+  folder_id        = var.type-6-folder-id
+  retention_period = "5h"
+  data_stream = ""
 }

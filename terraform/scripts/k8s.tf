@@ -94,3 +94,15 @@ resource "yandex_resourcemanager_folder_iam_member" "load-balancer-admin" {
   role      = "load-balancer.admin"
   member    = "serviceAccount:${yandex_iam_service_account.k8s-account.id}"
 }
+
+resource "yandex_resourcemanager_folder_iam_member" "logging-writer" {
+  folder_id = var.type-6-folder-id
+  role      = "logging.writer"
+  member    = "serviceAccount:${yandex_iam_service_account.k8s-account.id}"
+}
+
+resource "yandex_resourcemanager_folder_iam_member" "storage-uploader" {
+  folder_id = var.type-6-folder-id
+  role      = "storage.uploader"
+  member    = "serviceAccount:${yandex_iam_service_account.k8s-account.id}"
+}
