@@ -13,6 +13,7 @@ spec:
         - prometheus-shlim-tech.ru
         - mipt-study.ru
         - rutesil.ru
+        - service-shlim-tech.ru
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -66,7 +67,7 @@ spec:
                 name: type-6-prom-prometheus-server
                 port:
                   number: 80
-    - host: rutesil.ru
+    - host: service-shlim-tech.ru
       http:
         paths:
           - path: /
