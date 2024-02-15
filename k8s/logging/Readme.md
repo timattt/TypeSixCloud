@@ -5,3 +5,4 @@
 https://cloud.yandex.ru/ru/docs/logging/tutorials/k8s-fluent-bit-logging
 
 Фактически достаточно просто установить расширение в кластер.
+Используем сервисный аккаунт для кубера.
