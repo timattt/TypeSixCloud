@@ -8,6 +8,9 @@ resource "yandex_kubernetes_cluster" "type-6-k8s" {
       zone      = yandex_vpc_subnet.type-6-subnet.zone
       subnet_id = yandex_vpc_subnet.type-6-subnet.id
     }
+    master_logging {
+      enabled = false
+    }
     security_group_ids = [yandex_vpc_security_group.type-6-security-group.id]
   }
   service_account_id      = yandex_iam_service_account.k8s-account.id
