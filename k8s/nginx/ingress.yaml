@@ -7,26 +7,41 @@ metadata:
 spec:
   tls:
     - hosts:
-        - auth-mipt-match.ru
+        - service-shlim-tech.ru
         - mipt-match.ru
+        - rutesil.ru
         - grafana-shlim-tech.ru
         - prometheus-shlim-tech.ru
-        - mipt-study.ru
-        - rutesil.ru
-        - service-shlim-tech.ru
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
-    - host: auth-mipt-match.ru
+    #
+    # TYPE-6
+    #
+    - host: service-shlim-tech.ru
       http:
         paths:
-          - path: /
+          - path: /login
             pathType: Prefix
             backend:
               service:
                 name: type-6
                 port:
                   number: 443
+    - host: service-shlim-tech.ru
+      http:
+        paths:
+          - path: /oauth2
+            pathType: Prefix
+            backend:
+              service:
+                name: type-6
+                port:
+                  number: 443
+
+    #
+    # TYPE-7
+    #
     - host: mipt-match.ru
       http:
         paths:
@@ -37,7 +52,7 @@ spec:
                 name: type-7
                 port:
                   number: 443
-    - host: auth-mipt-match.ru
+    - host: service-shlim-tech.ru
       http:
         paths:
           - path: /metadata
@@ -47,6 +62,10 @@ spec:
                 name: type-7-m
                 port:
                   number: 443
+
+    #
+    # SERVICES
+    #
     - host: grafana-shlim-tech.ru
       http:
         paths:
@@ -55,25 +74,5 @@ spec:
             backend:
               service:
                 name: grafana
-                port:
-                  number: 443
-    - host: prometheus-shlim-tech.ru
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: type-6-prom-prometheus-server
-                port:
-                  number: 80
-    - host: service-shlim-tech.ru
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: type-9
                 port:
                   number: 443
