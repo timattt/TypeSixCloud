@@ -9,7 +9,6 @@ spec:
     - hosts:
         - service-shlim-tech.ru
         - mipt-match.ru
-        - rutesil.ru
         - grafana-shlim-tech.ru
         - prometheus-shlim-tech.ru
       secretName: domain-name-secret
