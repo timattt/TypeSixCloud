@@ -21,17 +21,7 @@ spec:
     - host: service-shlim-tech.ru
       http:
         paths:
-          - path: /login
-            pathType: Prefix
-            backend:
-              service:
-                name: type-6
-                port:
-                  number: 443
-    - host: service-shlim-tech.ru
-      http:
-        paths:
-          - path: /oauth2
+          - path: /sso
             pathType: Prefix
             backend:
               service:
