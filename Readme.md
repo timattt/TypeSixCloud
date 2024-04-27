@@ -38,3 +38,4 @@ graph TD;
     * [Сервисы](https://github.com/timattt/TypeSixCloud/tree/master/k8s/services)
     * [Grafana и Prometheus](https://github.com/timattt/TypeSixCloud/tree/master/k8s/grafanaAndPrometheus)
     * [Nginx](https://github.com/timattt/TypeSixCloud/tree/master/k8s/nginx)
+    * [Логирование](https://github.com/timattt/TypeSixCloud/tree/master/k8s/logging)
