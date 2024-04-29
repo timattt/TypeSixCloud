@@ -8,7 +8,6 @@ spec:
   tls:
     - hosts:
         - service-shlim-tech.ru
-        - mipt-match.ru
         - grafana-shlim-tech.ru
         - prometheus-shlim-tech.ru
       secretName: domain-name-secret
@@ -29,29 +28,8 @@ spec:
                   number: 443
 
     #
-    # TYPE-7
+    # TYPE-8
     #
-    - host: mipt-match.ru
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: type-7
-                port:
-                  number: 443
-    - host: service-shlim-tech.ru
-      http:
-        paths:
-          - path: /metadata
-            pathType: Prefix
-            backend:
-              service:
-                name: type-7-m
-                port:
-                  number: 443
-
     - host: service-shlim-tech.ru
       http:
         paths:
