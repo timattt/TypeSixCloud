@@ -33,3 +33,9 @@ kubectl apply -f acme-issuer.yaml
 ```
 kubectl apply -f ingress.yaml
 ```
+
+## Проверка состояния сертификата
+
+```
+kubectl describe certificate
+```

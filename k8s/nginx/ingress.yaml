@@ -7,16 +7,17 @@ metadata:
 spec:
   tls:
     - hosts:
-        - service-shlim-tech.ru
-        - grafana-shlim-tech.ru
-        - prometheus-shlim-tech.ru
+        - shlimtech.org
+        - service.shlimtech.org
+        - grafana.shlimtech.org
+        - pattern.shlimtech.org
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
     #
     # TYPE-6
     #
-    - host: service-shlim-tech.ru
+    - host: service.shlimtech.org
       http:
         paths:
           - path: /sso
@@ -30,7 +31,7 @@ spec:
     #
     # TYPE-8
     #
-    - host: service-shlim-tech.ru
+    - host: pattern.shlimtech.org
       http:
         paths:
           - path: /
@@ -44,7 +45,7 @@ spec:
     #
     # SERVICES
     #
-    - host: grafana-shlim-tech.ru
+    - host: grafana.shlimtech.org
       http:
         paths:
           - path: /
