@@ -23,13 +23,15 @@ kubectl create secret generic type-6-basic-secret-files `
 ```
 
 ```
-kubectl create secret generic type-7-basic-secret-files `
-    --from-file=./ssl/type-7/type-7-certificate `
-    --from-file=./ssl/type-7/type-7-key
-```
-
-```
 kubectl create secret generic type-10-mail-creds `
 --from-literal=username=??? `
 --from-literal=password=??? `
+```
+
+## Как создавать секреты для sll в фронте (не в проде сейчас)
+
+```
+kubectl create secret generic type-7-basic-secret-files `
+    --from-file=./ssl/type-7/type-7-certificate `
+    --from-file=./ssl/type-7/type-7-key
 ```
