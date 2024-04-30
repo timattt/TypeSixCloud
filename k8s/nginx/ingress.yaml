@@ -11,6 +11,7 @@ spec:
         - service.shlimtech.org
         - grafana.shlimtech.org
         - pattern.shlimtech.org
+        - rutesil.shlimtech.org
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -27,7 +28,6 @@ spec:
                 name: type-6
                 port:
                   number: 443
-
     #
     # TYPE-8
     #
@@ -41,7 +41,19 @@ spec:
                 name: type-8
                 port:
                   number: 443
-
+    #
+    # TYPE-9
+    #
+    - host: rutesil.shlimtech.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: type-9
+                port:
+                  number: 443
     #
     # SERVICES
     #
