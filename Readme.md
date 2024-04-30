@@ -6,7 +6,7 @@
 
 * [**Grafana**](https://grafana.shlimtech.org)
 * [**Pattern**](http://pattern.shlimtech.org)
-* [**SSO**]([https://service.shlimtech.org/sso/login](https://service.shlimtech.org/sso/pages/login))
+* [**SSO**](https://service.shlimtech.org/sso/pages/login)
 
 ## Инфраструктура
 
