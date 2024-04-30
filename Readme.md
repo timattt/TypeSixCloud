@@ -4,28 +4,28 @@
 
 ## Ссылки
 
-* [**Grafana**](https://grafana-shlim-tech.ru/)
-* [**mipt.match**](http://mipt-match.ru/)
+* [**Grafana**](https://grafana.shlimtech.org)
+* [**Pattern**](http://pattern.shlimtech.org)
+* [**SSO**](https://service.shlimtech.org/sso/login)
 
 ## Инфраструктура
 
 ```mermaid
 graph TD;
  subgraph "Cloud"
-    type-7;
     di{Postgres} --- type-6;
-    type-7-d --> di{Postgres};
-    type-7-m --> di{Postgres};
-    type-7-m -.-> type-6;
-    type-7-m --> type-7-d;
+    type-8 --- type-6;
+    type-6 --- rabbit;
+    type-10 --- rabbit;
 
  end
  subgraph "Web"
-   Browser --> type-7;
    Browser -.-> type-6;
-   Browser --> type-7-m;
-
+type-10 -.-> SMTP;
+   Browser -.-> type-8;
+   
  end
+
 ```
 
 ## Инструкция по выкатыванию в облако
