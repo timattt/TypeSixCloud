@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: type-11
+spec:
+  ports:
+    - port: 443
+      targetPort: 8080
+  selector:
+    app: type-11

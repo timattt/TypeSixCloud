@@ -56,6 +56,19 @@ spec:
                 port:
                   number: 443
     #
+    # TYPE-11
+    #
+    - host: type-11.shlimtech.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: type-11
+                port:
+                  number: 443
+    #
     # TYPE-12
     #
     - host: messenger.shlimtech.org
