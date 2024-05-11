@@ -12,6 +12,7 @@ spec:
         - grafana.shlimtech.org
         - pattern.shlimtech.org
         - rutesil.shlimtech.org
+        - messenger.shlimtech.org
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -52,6 +53,19 @@ spec:
             backend:
               service:
                 name: type-9
+                port:
+                  number: 443
+    #
+    # TYPE-12
+    #
+    - host: messenger.shlimtech.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: type-12
                 port:
                   number: 443
     #

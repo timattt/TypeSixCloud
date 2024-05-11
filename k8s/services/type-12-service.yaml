@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: type-12
+spec:
+  ports:
+    - port: 443
+      targetPort: 3000
+  selector:
+    app: type-12
