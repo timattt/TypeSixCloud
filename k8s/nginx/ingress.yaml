@@ -13,6 +13,7 @@ spec:
         - pattern.shlimtech.org
         - rutesil.shlimtech.org
         - messenger.shlimtech.org
+        - type-11.shlimtech.org
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
