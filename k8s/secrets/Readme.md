@@ -15,7 +15,9 @@ kubectl create secret generic type-6-basic-secrets `
 --from-literal=type_8_client_id= `
 --from-literal=type_8_client_secret= `
 --from-literal=type_12_client_id= `
---from-literal=type_12_client_secret=
+--from-literal=type_12_client_secret= `
+--from-literal=type_6_redis_password= `
+--from-literal=type_6_redis_hostname=
 ```
 
 ```

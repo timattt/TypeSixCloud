@@ -14,3 +14,7 @@ variable "type-6-token" {
   type = string
   description = "token for authorization"
 }
+variable "type-6-redis-password" {
+  type = string
+  description = "Redis password"
+}
