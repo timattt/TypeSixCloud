@@ -23,7 +23,9 @@ kubectl create secret generic type-6-basic-secrets `
 ```
 kubectl create secret generic type-6-basic-secret-files `
     --from-file=./ssl/type-6/type-6-certificate `
-    --from-file=./ssl/type-6/type-6-key
+    --from-file=./ssl/type-6/type-6-key `
+    --from-file=./ssl/type-6-web/private_key.der `
+    --from-file=./ssl/type-6-web/public_key.der
 ```
 
 ```
