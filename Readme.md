@@ -4,10 +4,10 @@
 
 ## Ссылки
 
-* [**Grafana**](https://grafana.shlimtech.org)
-* [**Pattern**](http://pattern.shlimtech.org)
-* [**SSO**](https://service.shlimtech.org/sso/pages/login)
-* [**Rutesil**](https://rutesil.shlimtech.org/)
+* [**Grafana**](https://grafana.mipt.io)
+* [**Pattern**](http://pattern.mipt.io)
+* [**SSO**](https://service.mipt.io/sso/pages/login)
+* [**Rutesil**](https://rutesil.mipt.io/)
 
 ## Инфраструктура
 

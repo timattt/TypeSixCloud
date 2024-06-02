@@ -7,20 +7,20 @@ metadata:
 spec:
   tls:
     - hosts:
-        - shlimtech.org
-        - service.shlimtech.org
-        - grafana.shlimtech.org
-        - pattern.shlimtech.org
-        - rutesil.shlimtech.org
-        - messenger.shlimtech.org
-        - type-11.shlimtech.org
+        - mipt.io
+        - sso.mipt.io
+        - grafana.mipt.io
+        - pattern.mipt.io
+        - rutesil.mipt.io
+        - messenger.mipt.io
+        - api.messenger.mipt.io
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
     #
     # TYPE-6
     #
-    - host: service.shlimtech.org
+    - host: sso.mipt.io
       http:
         paths:
           - path: /sso
@@ -33,7 +33,7 @@ spec:
     #
     # TYPE-8
     #
-    - host: pattern.shlimtech.org
+    - host: pattern.mipt.io
       http:
         paths:
           - path: /
@@ -46,7 +46,7 @@ spec:
     #
     # TYPE-9
     #
-    - host: rutesil.shlimtech.org
+    - host: rutesil.mipt.io
       http:
         paths:
           - path: /
@@ -59,7 +59,7 @@ spec:
     #
     # TYPE-11
     #
-    - host: type-11.shlimtech.org
+    - host: api.messenger.mipt.io
       http:
         paths:
           - path: /
@@ -72,7 +72,7 @@ spec:
     #
     # TYPE-12
     #
-    - host: messenger.shlimtech.org
+    - host: messenger.mipt.io
       http:
         paths:
           - path: /
@@ -85,7 +85,7 @@ spec:
     #
     # SERVICES
     #
-    - host: grafana.shlimtech.org
+    - host: grafana.mipt.io
       http:
         paths:
           - path: /
