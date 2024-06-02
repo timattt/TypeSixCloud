@@ -11,9 +11,8 @@ spec:
         - sso.mipt.io
         - grafana.mipt.io
         - pattern.mipt.io
-        - rutesil.mipt.io
         - messenger.mipt.io
-        - api.messenger.mipt.io
+        - grpc.mipt.io
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -23,7 +22,7 @@ spec:
     - host: sso.mipt.io
       http:
         paths:
-          - path: /sso
+          - path: /public
             pathType: Prefix
             backend:
               service:
@@ -44,22 +43,9 @@ spec:
                 port:
                   number: 443
     #
-    # TYPE-9
-    #
-    - host: rutesil.mipt.io
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: type-9
-                port:
-                  number: 443
-    #
     # TYPE-11
     #
-    - host: api.messenger.mipt.io
+    - host: grpc.mipt.io
       http:
         paths:
           - path: /
