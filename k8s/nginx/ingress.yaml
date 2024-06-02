@@ -13,6 +13,7 @@ spec:
         - pattern.mipt.io
         - messenger.mipt.io
         - grpc.mipt.io
+        - rutesil.mipt.io
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -40,6 +41,19 @@ spec:
             backend:
               service:
                 name: type-8
+                port:
+                  number: 443
+    #
+    # TYPE-9
+    #
+    - host: rutesil.mipt.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: type-9
                 port:
                   number: 443
     #
