@@ -6,7 +6,7 @@
 
 * [**Grafana**](https://grafana.mipt.io)
 * [**Pattern**](http://pattern.mipt.io)
-* [**SSO**](https://service.mipt.io/sso/pages/login)
+* [**SSO**](https://sso.mipt.io/public/pages/login)
 * [**Rutesil**](https://rutesil.mipt.io/)
 
 ## Инфраструктура
