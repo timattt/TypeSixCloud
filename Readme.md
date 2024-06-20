@@ -19,6 +19,9 @@ graph TD;
     type-6 --- rabbit;
     type-10 --- rabbit;
     type-9;
+    type-12 --- type-6;
+    type-11 --- di{Postgres};
+    type-11 --- type-6;
  end
  subgraph "Local"
     type-2;
@@ -29,6 +32,8 @@ graph TD;
    Browser -.-> type-8;
    Browser -.-> type-2;
    Browser -.-> type-9;
+   Browser -.-> type-12;
+   Browser -.-> type-11;
  end
 
 ```
@@ -41,6 +46,8 @@ graph TD;
 * [**Type-8**](https://github.com/timattt/TypeEight)
 * [**Type-9**](https://github.com/timattt/TypeNine)
 * [**Type-10**](https://github.com/timattt/typeten)
+* [**Type-11**](https://github.com/timattt/typeeleven)
+* [**Type-12**](https://github.com/timattt/typetwelve)
 
 ## Инструкция по выкатыванию в облако
 
