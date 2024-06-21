@@ -23,6 +23,8 @@ spec:
               value: "TRUE"
             - name: ICON
               value: "/data/server-icon.png"
+            - name: OPS
+              value: "timattt"
           resources:
             requests:
               memory: "1000Mi"
