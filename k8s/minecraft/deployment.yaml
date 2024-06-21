@@ -25,6 +25,8 @@ spec:
               value: "/data/server-icon.png"
             - name: OPS
               value: "timattt"
+            - name: EXISTING_OPS_FILE
+              value: "SYNC_FILE_MERGE_LIST"
           resources:
             requests:
               memory: "1000Mi"
