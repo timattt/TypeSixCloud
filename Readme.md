@@ -14,23 +14,22 @@
 ```mermaid
 graph TD;
  subgraph "Cloud"
-    di{Postgres} --- type-6;
+    postgres{Postgres} --- type-6;
     type-8 --- type-6;
-    type-6 --- rabbit;
-    type-10 --- rabbit;
+    type-6 --- rabbit{Rabbit};
+    type-10 --- rabbit{Rabbit};
     type-9;
     type-12 --- type-6;
-    type-11 --- di{Postgres};
+    type-11 --- postgres{Postgres};
     type-11 --- type-6;
+    type-6 --- reddis{Reddis};
  end
  subgraph "Local"
     type-2;
  end
  subgraph "Web"
    Browser -.-> type-6;
-   type-10 -.-> SMTP;
    Browser -.-> type-8;
-   Browser -.-> type-2;
    Browser -.-> type-9;
    Browser -.-> type-12;
    Browser -.-> type-11;
