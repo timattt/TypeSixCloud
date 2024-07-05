@@ -14,6 +14,7 @@ spec:
         - messenger.mipt.io
         - grpc.mipt.io
         - rutesil.mipt.io
+        - test.sso.mipt.io
       secretName: domain-name-secret
   ingressClassName: "nginx"
   rules:
@@ -21,6 +22,19 @@ spec:
     # TYPE-6
     #
     - host: sso.mipt.io
+      http:
+        paths:
+          - path: /public
+            pathType: Prefix
+            backend:
+              service:
+                name: type-6
+                port:
+                  number: 443
+    #
+    # TYPE-6-test
+    #
+    - host: test.sso.mipt.io
       http:
         paths:
           - path: /public
